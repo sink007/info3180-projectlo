@@ -43,7 +43,7 @@
     const router = useRouter();
 
     function getCsrfToken() {
-        fetch('https://info3180-project-lof1.onrender.com/api/v1/csrf-token')
+        fetch('/api/v1/csrf-token')
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
