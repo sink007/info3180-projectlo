@@ -69,7 +69,7 @@
         form_data.append('photo', photo.value);
         console.log(form_data);
         try {
-            let response = await fetch('https://info3180-project-lof1.onrender.com/api/register', {
+            let response = await fetch('/api/register', {
                 method: 'POST',
                 body: form_data,
                 headers: {
