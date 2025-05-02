@@ -17,5 +17,8 @@ export default defineConfig({
         rewrite: (path) => path, 
       }
     }
+  },build: {
+    outDir: 'app/static',
+    emptyOutDir: true
   }
 });
