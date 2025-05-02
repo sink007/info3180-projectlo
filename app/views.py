@@ -26,7 +26,11 @@ from sqlalchemy import func, case
 
 @app.route('/')
 def index():
-    return jsonify(message="This is the beginning of our API")
+    return app.send_static_file('index.html')
+
+@app.route('/assets/<path:filename>')
+def assets(filename):
+  return app.send_static_file(os.path.join('assets', filename))
 
 @app.route('/api/v1/csrf-token', methods=['GET'])
 def get_csrf():

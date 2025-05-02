@@ -75,6 +75,7 @@
                 headers: {
                 'X-CSRFToken': csrf_token.value,
                 },
+                
             });
 
             let data = await response.json();
